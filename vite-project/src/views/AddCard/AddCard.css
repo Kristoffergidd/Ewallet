@@ -5,6 +5,18 @@ body{
     text-align: center;
 }
 
+.header{
+    color: black;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newcard{
+    color: grey;
+    font-size: small;
+}
+
 .form{
     display: grid;
     padding: 10px;
@@ -12,4 +24,5 @@ body{
 
 .cardtop{
     background-color: grey;
+    border-radius: 4%;
 }

@@ -8,8 +8,7 @@ const AddCard = () => {
   return (
     <CardProvider>
       <div className="add-card-container">
-        <h1> ADD A NEW BANK CARD</h1>
-        <h2>ADD A NEW BANK CARD</h2>
+        <h1 className='header'> ADD A NEW BANK CARD</h1>
         <CardForm />
       </div>
     </CardProvider>
