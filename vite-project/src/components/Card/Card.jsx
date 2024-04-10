@@ -2,7 +2,11 @@ import React from 'react';
 import { useCardContext } from '../../contexts/CardContext';
 
 const Card = () => {
-  const { cards } = useCardContext();
+  const { cards, removeCard } = useCardContext();
+
+  const handleRemoveCard = (index) => {
+    removeCard(index);
+  };
 
   return (
     <div>
@@ -12,6 +16,7 @@ const Card = () => {
           <p>Name: {card.name}</p>
           <p>Expiry: {card.expiry}</p>
           <p>Type: {card.type}</p>
+          <button onClick={() => handleRemoveCard(index)}>Remove</button>
         </div>
       ))}
     </div>

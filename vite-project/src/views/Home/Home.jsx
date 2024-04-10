@@ -6,7 +6,7 @@ import Top from '../../components/Top/Top';
 
 const Home = () => {
   const cards = useSelector(state => state.card.cards);
-
+  console.log(cards); // Lägg till denna rad för att logga korten till konsolen
   return (
     <div>
       <Top />
