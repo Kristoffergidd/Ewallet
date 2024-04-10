@@ -1,0 +1,15 @@
+body{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.form{
+    display: grid;
+    padding: 10px;
+}
+
+.cardtop{
+    background-color: grey;
+}
