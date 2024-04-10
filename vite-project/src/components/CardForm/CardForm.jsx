@@ -45,17 +45,18 @@ const CardForm = () => {
           <img src={vendorBitcoin} className='bitcoin' alt="" /> 
         </div>
         <div className="card-info">
-          <p className="card-number">XXXX XXXX XXXX XXXX:{formData.number}</p>
+          <p className="card-number">  {formData.number ? formData.number:"XXXX XXXX XXXX XXXX"}</p>
           <div className="cardholder-info">
             <p className="cardholder-name">CARDHOLDER NAME: 
             <br /> {formData.name}</p>
-            <p className="valid-thru">VALID THRU: {formData.expiry}</p>
+            <p className="valid-thru">VALID THRU: 
+            <br /> {formData.expiry ? formData.expiry:" XX / XX"  }</p>
            </div>
         </div>
       </div>
 
       <div className='form'>
-        <input type="text" name="number" value={formData.number} onChange={handleInputChange} placeholder="Numbers" />
+        <input type="text" name="number" value={formData.number} onChange={handleInputChange} placeholder="XXXX XXXX XXXX XXXX" />
         <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Name" />
         <input type="text" name="expiry" value={formData.expiry} onChange={handleInputChange} placeholder="Expiry" />
         <input type="text" name="expiry" placeholder="XXX" />
