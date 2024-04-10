@@ -37,7 +37,7 @@ const CardForm = () => {
     <div>
 
       <div>
-        <h2>Form Data</h2>
+        <h2>NEW CARD</h2>
         <p>Number: {formData.number}</p>
         <p>Name: {formData.name}</p>
         <p>Expiry: {formData.expiry}</p>

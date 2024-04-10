@@ -9,7 +9,7 @@ const AddCard = () => {
     <CardProvider>
       <Top />
       <div className="add-card-container">
-        <h2>Lägg Till Nytt Kort</h2>
+        <h2>ADD A NEW BANK CARD</h2>
         <Card />
         <CardForm />
       </div>
