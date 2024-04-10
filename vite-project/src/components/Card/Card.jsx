@@ -15,7 +15,6 @@ const Card = () => {
           <p>Number: {card.number}</p>
           <p>Name: {card.name}</p>
           <p>Expiry: {card.expiry}</p>
-          <p>Type: {card.type}</p>
           <button onClick={() => handleRemoveCard(index)}>Remove</button>
         </div>
       ))}
