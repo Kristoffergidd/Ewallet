@@ -126,3 +126,12 @@ body{
     padding-right: 20px;
   }
 
+/* Design 1 */
+.cardtop.design1 {
+  background-color: orange;
+}
+
+/* Design 2 */
+.cardtop.design2 {
+  background-color: #ec1d1d; /* Bakgrundsfärg för design 2 */
+}
