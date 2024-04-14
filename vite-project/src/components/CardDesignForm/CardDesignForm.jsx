@@ -6,7 +6,7 @@ const CardDesignForm = ({ handleCardDesignChange }) => {
   const handleDesignChange = (event) => {
     const design = event.target.value;
     setCardDesign(design);
-    handleCardDesignChange(design); // Skicka med den valda designen till förälderkomponenten
+    handleCardDesignChange(design); 
   };
 
   return (

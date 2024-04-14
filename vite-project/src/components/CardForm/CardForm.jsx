@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import chipImage from '../../assets/chip-dark.svg';
 import vendorBitcoin from '../../assets/vendor-bitcoin.svg';
 import CardDesignForm from '../CardDesignForm/CardDesignForm';
@@ -36,12 +36,24 @@ const CardForm = ({ handleAddCard }) => {
       cardDesign: 'default',
     });
   };
+  
+  const cardStyles = {
+    default: 'white',
+    bitcoindesign: 'orange',
+    ninja: 'black',
+    blockchain: 'green',
+    evil: 'red',
+  };
+
+  const cardStyle = {
+    backgroundColor: cardStyles[formData.cardDesign] || 'white', // Använd den associerade färgen eller default-värdet 'white' om designen inte matchar någon
+  };
 
   return (
     <div className='form'>
       <h2 className='newcard'>NEW CARD</h2>
       <form onSubmit={handleSubmit}>
-        <div className='cardtop'>
+        <div className='cardtop' style={cardStyle}> {/* Tillämpa den dynamiska stilen här */}
           <div className="logo-container">
             <img src={chipImage} className='chip-image' alt="" /> 
             <img src={vendorBitcoin} className='bitcoin' alt="" /> 
@@ -56,10 +68,8 @@ const CardForm = ({ handleAddCard }) => {
             </div>
           </div>
         </div>
-        <div className='form'>
+        <div className='form-Card'>
           <div className='form-group'>
-          <div className={`card ${formData.cardDesign}`}>
-          </div>
             <label htmlFor='number'>CardNumber:</label>
             <input type='text' id='number' name='number' value={formData.number} onChange={handleInputChange} placeholder='XXXX XXXX XXXX XXXX' />
           </div>
