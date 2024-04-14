@@ -22,62 +22,6 @@ body{
     padding: 10px;
 }
 
-/* .chip-image{
-}
-
-.cardtop{
-    background-color: grey;
-    border-radius: 4%;
-} */
-
-/* .cardtop {
-    width: 350px;
-    height: 200px;
-    background-color:lightgrey;
-    border-radius: 15px;
-    padding: 20px;
-    position: relative;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .chip-image {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 50px;
-  }
-  
-  .bitcoin {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 50px;
-  }
-  
-  .card-number {
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .cardholder-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .cardholder-name {
-    font-size: 16px;
-  }
-  
-  .valid-thru {
-    font-size: 16px;
-    color: #888;
-  } */
-
   .cardtop {
     position: relative;
     width: 400px;
@@ -126,12 +70,6 @@ body{
     padding-right: 20px;
   }
 
-/* Design 1 */
-.cardtop.design1 {
-  background-color: orange;
-}
-
-/* Design 2 */
-.cardtop.design2 {
-  background-color: #ec1d1d; /* Bakgrundsfärg för design 2 */
-}
+  .card.bitcoindesign {
+    background-color: yellow; /* Lägg till dina specifika stilar för designen "bitcoin" */
+  }

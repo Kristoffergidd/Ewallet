@@ -5,22 +5,25 @@ import Card from '../../components/Card/Card';
 import Top from '../../components/Top/Top';
 import "./Home.css";
 
-
 const Home = () => {
-  const cards = useSelector(state => state.card.cards);
-  console.log(cards); // Lägg till denna rad för att logga korten till konsolen
+  const cards = useSelector(state => state.card.cards); // Använd useSelector för att hämta kortlistan från Redux-storen
+
+  // Logga kortlistan till konsolen
+  console.log('Kortlistan från Redux-storen:', cards);
+
   return (
     <div>
       <Top />
       <div className="home-container">
         <h2>Alla Kort</h2>
-        <Card />
         <div className="card-container">
+          {/* Loopa igenom kortlistan och rendera varje kort */}
           {cards.map((card, index) => (
             <Card key={index} card={card} />
           ))}
         </div>
-        <Link to="/add-card"> {/* Lägg till en länk till AddCard-vyn */}
+        {/* Lägg till en länk till AddCard-vyn */}
+        <Link to="/add-card">
           <button>Lägg Till Kort</button>
         </Link>
       </div>
