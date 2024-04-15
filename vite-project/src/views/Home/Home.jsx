@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom'; // Importera Link för att använda kna
 import Card from '../../components/Card/Card';
 import Top from '../../components/Top/Top';
 import "./Home.css";
-import chipImage from '../../assets/chip-dark.svg';
-import vendorBitcoin from '../../assets/vendor-bitcoin.svg';
-import vendorNinja from "../../assets/vendor-ninja.svg";
+
 
 const Home = () => {
   const cards = useSelector(state => state.card.cards); // Använd useSelector för att hämta kortlistan från Redux-storen
