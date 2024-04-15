@@ -55,3 +55,7 @@
   background-color: yellow; /* Lägg till dina specifika stilar för designen "bitcoin" */
 }
 
+.card.active {
+  transform: translateY(-10px); /* Flytta det aktiva kortet uppåt */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lägg till en skugga för att markera det aktiva kortet */
+}
