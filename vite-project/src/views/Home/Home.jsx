@@ -27,7 +27,6 @@ import { setSelectedCard, updateCardOrder } from '../../reducers/cardSlice';
 //     </div>
 //   );
 // }
-
 // export default Home;
 
 
@@ -47,13 +46,10 @@ const Home = () => {
     <div>
       <h2>Alla Kort</h2>
       <div className="card-container">
-        {/* Loopa igenom kortlistan och rendera varje kort */}
-        {cards.map((card, index) => (
-          <Card key={index} card={card} onClick={() => handleCardClick(index)} /> // Skicka med handleCardClick som prop
-        ))}
+      <Card onClick={() => handleCardClick(index)} />
       </div>
     </div>
   );
 };
 
-export default Home;
+export default Home; 
