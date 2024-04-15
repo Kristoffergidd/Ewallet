@@ -9,27 +9,6 @@ import { setSelectedCard, updateCardOrder } from '../../reducers/cardSlice';
 
 
 
-// const Home = () => {
-//   const cards = useSelector(state => state.card.cards); // Använd useSelector för att hämta kortlistan från Redux-storen
-
-//   return (
-//     <div>
-//       <Top />
-//       <div className="home-container">
-//         <h2>Alla Kort</h2>
-//         <div className="card-container">
-//           <Card/>
-//         </div>
-//         <Link to="/add-card">
-//           <button>Lägg Till Kort</button>
-//         </Link>
-//       </div>
-//     </div>
-//   );
-// }
-// export default Home;
-
-
 const Home = () => {
   const cards = useSelector(state => state.card.cards);
   const dispatch = useDispatch();
@@ -44,6 +23,7 @@ const Home = () => {
 
   return (
     <div>
+      <Top/>
       <h2>Alla Kort</h2>
       <div className="card-container">
       <Card onClick={() => handleCardClick(index)} />
