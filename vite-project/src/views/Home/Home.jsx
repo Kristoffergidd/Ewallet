@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'; // Importera Link för att använda knappen
 import Card from '../../components/Card/Card';
 import Top from '../../components/Top/Top';
-import "./Home.css";
 import { useDispatch } from 'react-redux'; // Importera useDispatch från react-redux
 import { setSelectedCard, updateCardOrder } from '../../reducers/cardSlice'; 
 
@@ -28,6 +27,7 @@ const Home = () => {
       <div className="card-container">
       <Card onClick={() => handleCardClick(index)} />
       </div>
+      <Link to="/add-card">Lägg till kort</Link> {/* Länk till addcard.jsx */}
     </div>
   );
 };
