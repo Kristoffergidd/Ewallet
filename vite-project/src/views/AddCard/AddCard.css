@@ -46,10 +46,7 @@ body{
     height: 50px;
   }
   
-  .card-info {
-    /* padding: 20px; */
-  }
-  
+ 
   .card-number {
     font-size: 20px;
     margin-bottom: 10px;
@@ -71,6 +68,17 @@ body{
   }
 
   .bitcoindesign {
-    background-color: yellow; 
+    background-color: orange;
   }
 
+  .blockchain{
+    background-color: purple;
+  }
+
+  .evil{
+    background-color: red;
+  }
+
+  .ninja{
+    background-color: rgb(65, 58, 58)
+  }

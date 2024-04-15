@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import chipImage from '../../assets/chip-dark.svg';
 import vendorBitcoin from '../../assets/vendor-bitcoin.svg';
+import vendorNinja from "../../assets/vendor-ninja.svg";
 import CardDesignForm from '../CardDesignForm/CardDesignForm';
 
 const CardForm = ({ handleAddCard }) => {
@@ -38,10 +39,10 @@ const CardForm = ({ handleAddCard }) => {
   };
   
   const cardStyles = {
-    default: 'white',
+    default: 'lightgrey',
     bitcoindesign: 'orange',
-    ninja: 'black',
-    blockchain: 'green',
+    ninja: 'rgb(65, 58, 58)',
+    blockchain: 'purple',
     evil: 'red',
   };
 
