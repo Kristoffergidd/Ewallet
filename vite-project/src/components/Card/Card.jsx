@@ -4,6 +4,8 @@ import { removeCard } from '../../reducers/cardSlice';
 import vendorBitcoin from '../../assets/vendor-bitcoin.svg';
 import vendorNinja from "../../assets/vendor-ninja.svg";
 import chipImage from '../../assets/chip-dark.svg';
+import vendorEvil from '../../assets/vendor-evil.svg';
+import vendorBlockchain from '../../assets/vendor-blockchain.svg';
 
 
 // const Card = () => {
@@ -54,7 +56,10 @@ const Card = () => {
         return vendorBitcoin;
       case 'ninja':
         return vendorNinja;
-   
+        case 'evil':
+          return vendorEvil;
+          case 'blockchain':
+            return vendorBlockchain;
     }
   };
 
