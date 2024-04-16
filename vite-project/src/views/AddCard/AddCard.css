@@ -86,7 +86,16 @@ body{
   flex-direction: column;
 }
 
-  
-.stacked-card {
+.card {
+  margin-bottom: 20px;
+}
+
+.active-card {
   margin-bottom: 10px; 
+
+}
+
+.stacked-card {
+  margin-bottom: -150px;
+
 }

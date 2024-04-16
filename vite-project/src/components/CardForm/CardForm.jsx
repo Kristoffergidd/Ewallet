@@ -4,7 +4,6 @@ import vendorBitcoin from '../../assets/vendor-bitcoin.svg';
 import vendorNinja from "../../assets/vendor-ninja.svg";
 import CardDesignForm from '../CardDesignForm/CardDesignForm';
 
-
 const CardForm = ({ handleAddCard }) => {
   const [formData, setFormData] = useState({
     number: '',
