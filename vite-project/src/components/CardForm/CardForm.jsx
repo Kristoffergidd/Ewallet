@@ -37,7 +37,7 @@ const CardForm = ({ handleAddCard }) => {
       cardDesign: 'default',
     });
   };
-  
+
   const cardStyles = {
     default: 'lightgrey',
     bitcoindesign: 'orange',
@@ -47,34 +47,31 @@ const CardForm = ({ handleAddCard }) => {
   };
 
   const cardStyle = {
-    backgroundColor: cardStyles[formData.cardDesign] || 'white', // Använd den associerade färgen eller default-värdet 'white' om designen inte matchar någon
+    backgroundColor: cardStyles[formData.cardDesign] || 'white',
   };
 
   const cardIcons = {
-    default: chipImage, // Använd standardikonen för standarddesignen
-    bitcoindesign: vendorBitcoin, // Använd bitcoinsymbolen för bitcoin-designen
-    ninja: vendorNinja, // Använd ninjasymbolen för ninja-designen
-    // Lägg till fler designikoner här vid behov
+    default: chipImage,
+    bitcoindesign: vendorBitcoin,
+    ninja: vendorNinja,
   };
 
-  const cardIcon = cardIcons[formData.cardDesign] || chipImage; // Hämta den motsvarande ikonen för den valda designen, eller använd standardikonen om ingen matchning hittades
+  const cardIcon = cardIcons[formData.cardDesign] || chipImage;
 
   return (
     <div className='form'>
       <h2 className='newcard'>NEW CARD</h2>
       <form onSubmit={handleSubmit}>
-        <div className='cardtop' style={cardStyle}> {/* Tillämpa den dynamiska stilen här */}
+        <div className='cardtop' style={cardStyle}>
           <div className="logo-container">
             <img src={chipImage} className='chip-image' alt="" /> 
-            <img src={cardIcon} className='design-icon' alt="" /> {/* Använd den dynamiskt hämtade ikonen */}
+            <img src={cardIcon} className='design-icon' alt="" />
           </div>
           <div className="card-info">
-            <p className="card-number">  {formData.number ? formData.number:"XXXX XXXX XXXX XXXX"}</p>
+            <p className="card-number">{formData.number ? formData.number : "XXXX XXXX XXXX XXXX"}</p>
             <div className="cardholder-info">
-              <p className="cardholder-name">CARDHOLDER NAME: 
-              <br /> {formData.name}</p>
-              <p className="valid-thru">VALID THRU: 
-              <br /> {formData.expiry ? formData.expiry:" XX / XX"  }</p>
+              <p className="cardholder-name">CARDHOLDER NAME: <br /> {formData.name}</p>
+              <p className="valid-thru">VALID THRU: <br /> {formData.expiry ? formData.expiry : " XX / XX"}</p>
             </div>
           </div>
         </div>

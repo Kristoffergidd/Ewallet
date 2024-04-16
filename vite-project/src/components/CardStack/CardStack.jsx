@@ -1,15 +1,15 @@
-// CardStack.jsx
 import React from 'react';
-import Card from '../Card/Card';
 
-const CardStack = ({ cards }) => {
+const CardStack = ({ cards, handleCardClick }) => {
   return (
     <div className="card-stack">
       {cards.map((card, index) => (
-        <Card key={index} card={card} />
+        <div key={index} className={`stacked-card ${card.cardDesign}`} onClick={() => handleCardClick(index)}>
+          <img src={getIcon(card.cardDesign)} className='bitcoin' alt="" />
+        </div>
       ))}
     </div>
   );
-}
+};
 
 export default CardStack;

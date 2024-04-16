@@ -87,7 +87,14 @@ body{
 }
 
 .card {
+  position: relative; /* Sätt kortets position till relativ för att använda absolut position för knappen */
   margin-bottom: 20px;
+}
+
+.remove-button {
+  position: absolute; /* Sätt knappens position till absolut för att placera den ovanpå kortet */
+  top: 10px; /* Justera önskad vertikal position */
+  right: 10px; /* Justera önskad horisontell position */
 }
 
 .active-card {
@@ -95,7 +102,18 @@ body{
 
 }
 
-.stacked-card {
-  margin-bottom: -150px;
+.inactive{
+ margin-bottom: -150px;
+}
 
+.add-card-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 20px;
 }

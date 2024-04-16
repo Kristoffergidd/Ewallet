@@ -11,7 +11,8 @@ const Card = () => {
   const cards = useSelector(state => state.card.cards);
   const dispatch = useDispatch();
 
-  const handleRemoveCard = (index) => {
+  const handleRemoveCard = (index, event) => {
+    event.stopPropagation(); // Förhindra att klickhändelsen sprider sig
     dispatch(removeCard(index));
   };
 
@@ -42,7 +43,7 @@ const Card = () => {
   return (
     <div>
       {cards.map((card, index) => (
-        <div key={index} className={`card ${card.cardDesign}`} onClick={() => handleCardClick(index)}>
+        <div key={index} className={`card ${card.cardDesign} ${index === 0 ? 'active' : 'inactive'}`} onClick={() => handleCardClick(index)}>
           <div className="logo-container">
             <img src={chipImage} className='chip-image' alt="" /> 
             <img src={getIcon(card.cardDesign)} className='bitcoin' alt="" />
@@ -54,7 +55,7 @@ const Card = () => {
               <p className="valid-thru">VALID THRU: <br /> {card.expiry ? card.expiry : " XX / XX"}</p>
             </div>
           </div>
-          <button onClick={() => handleRemoveCard(index)}>Remove</button>
+          <button onClick={(event) => handleRemoveCard(index, event)}>Remove</button>
         </div>
       ))}
     </div>
@@ -62,5 +63,3 @@ const Card = () => {
 };
 
 export default Card;
-
-

@@ -23,11 +23,15 @@ const Home = () => {
   return (
     <div>
       <Top/>
+      <nav>
+        <ul>
+          <li><Link to="/add-card">Lägg till kort</Link></li>
+        </ul>
+      </nav>
       <h2>Alla Kort</h2>
       <div className="card-container">
       <Card onClick={() => handleCardClick(index)} />
       </div>
-      <Link to="/add-card">Lägg till kort</Link> {/* Länk till addcard.jsx */}
     </div>
   );
 };
