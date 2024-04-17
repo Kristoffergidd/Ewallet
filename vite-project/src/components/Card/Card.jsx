@@ -21,7 +21,6 @@ const Card = () => {
     const updatedCards = [...cards]; 
     updatedCards.splice(index, 1); 
     updatedCards.unshift(selectedCard); 
- 
     dispatch({ type: 'card/updateCardOrder', payload: updatedCards });
   };
 
