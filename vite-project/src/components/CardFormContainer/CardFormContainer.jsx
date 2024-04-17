@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CardForm from './CardForm';
-import Card from './Card'; // Antag att du har en Card-komponent
+import Card from './Card'; 
 
 const CardFormContainer = () => {
   const [formData, setFormData] = useState({
