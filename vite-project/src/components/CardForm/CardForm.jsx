@@ -3,6 +3,8 @@ import chipImage from '../../assets/chip-dark.svg';
 import vendorBitcoin from '../../assets/vendor-bitcoin.svg';
 import vendorNinja from "../../assets/vendor-ninja.svg";
 import CardDesignForm from '../CardDesignForm/CardDesignForm';
+import vendorEvil from '../../assets/vendor-evil.svg';
+import vendorBlockchain from '../../assets/vendor-blockchain.svg';
 
 const CardForm = ({ handleAddCard }) => {
   const [formData, setFormData] = useState({
@@ -54,6 +56,8 @@ const CardForm = ({ handleAddCard }) => {
     default: chipImage,
     bitcoindesign: vendorBitcoin,
     ninja: vendorNinja,
+    evil: vendorEvil,
+    blockchain: vendorBlockchain,
   };
 
   const cardIcon = cardIcons[formData.cardDesign] || chipImage;

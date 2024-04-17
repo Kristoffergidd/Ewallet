@@ -87,14 +87,14 @@ body{
 }
 
 .card {
-  position: relative; /* Sätt kortets position till relativ för att använda absolut position för knappen */
+  position: relative; 
   margin-bottom: 20px;
 }
 
 .remove-button {
-  position: absolute; /* Sätt knappens position till absolut för att placera den ovanpå kortet */
-  top: 10px; /* Justera önskad vertikal position */
-  right: 10px; /* Justera önskad horisontell position */
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
 }
 
 .active-card {
@@ -116,4 +116,50 @@ body{
   text-decoration: none;
   font-size: 16px;
   margin-top: 20px;
+}
+
+.form-Card {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button[type='submit'] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+option {
+  font-size: 16px;
 }
