@@ -12,16 +12,16 @@ const Card = () => {
   const dispatch = useDispatch();
 
   const handleRemoveCard = (index, event) => {
-    event.stopPropagation(); // Förhindra att klickhändelsen sprider sig
+    event.stopPropagation(); 
     dispatch(removeCard(index));
   };
 
   const handleCardClick = (index) => {
-    const selectedCard = cards[index]; // Spara det klickade kortet
-    const updatedCards = [...cards]; // Skapa en kopia av kortlistan
-    updatedCards.splice(index, 1); // Ta bort det klickade kortet från nuvarande position
-    updatedCards.unshift(selectedCard); // Lägg till det klickade kortet längst upp i listan
-    // Uppdatera kortens ordning i storen
+    const selectedCard = cards[index]; 
+    const updatedCards = [...cards]; 
+    updatedCards.splice(index, 1); 
+    updatedCards.unshift(selectedCard); 
+ 
     dispatch({ type: 'card/updateCardOrder', payload: updatedCards });
   };
 
